@@ -1,0 +1,22 @@
+{
+  "name": "p-ythonia",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "pythonia": "^1.2.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@tsconfig/strictest": "catalog:",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "scripts": {
+    "format": "uv run ruff format && biome check --linter-enabled=false --write",
+    "format:check": "uv run ruff format --check && biome check --linter-enabled=false",
+    "lint": "uv run ruff check --fix && biome lint --write",
+    "start": "uv sync && . .venv/bin/activate && pnpx tsx index.ts",
+    "test": "echo \"Error: testing not configured\"",
+    "typecheck": "tsc --noEmit"
+  }
+}

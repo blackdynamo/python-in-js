@@ -1,0 +1,22 @@
+{
+  "name": "p-express",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@tsconfig/strictest": "catalog:",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  },
+  "scripts": {
+    "format": "uv run ruff format && biome check --linter-enabled=false --write",
+    "format:check": "uv run ruff format --check && biome check --linter-enabled=false",
+    "lint": "uv run ruff check --fix && biome lint --write",
+    "start:client": "pnpx tsx index.ts",
+    "start:server": "uv run fastapi run index.py",
+    "dev:server": "uv run fastapi dev index.py",
+    "test": "echo \"Error: testing not configured\"",
+    "typecheck": "tsc --noEmit"
+  }
+}

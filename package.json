@@ -1,0 +1,15 @@
+{
+  "name": "python-in-js",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "turbo": "^2.4.4"
+  },
+  "scripts": {
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  }
+}
